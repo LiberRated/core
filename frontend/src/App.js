@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import EnterPage from './EnterPage';
 
 function App() {
+  const handleCreateAccount = () => {
+    alert('Redirect to Create Account');
+    // e.g. navigate('/register');
+  };
+
+  const handleSignIn = () => {
+    alert('Redirect to Sign In');
+    // e.g. navigate('/login');
+  };
+
+  const handleContinue = () => {
+    alert('Continuing without account');
+    // e.g. navigate('/dashboard');
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <EnterPage
+        onCreateAccount={handleCreateAccount}
+        onSignIn={handleSignIn}
+        onContinue={handleContinue}
+      />
     </div>
   );
 }
 
 export default App;
+
