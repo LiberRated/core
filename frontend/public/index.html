@@ -28,16 +28,39 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div class="container">
+        <h3 class="screen-title">Welcome Screen</h3>
+        <div class="card">
+            <img src="logo192.png" alt="Happy people illustration" class="logo-192">
+            <h2>Welcome to <span class="brand">LiberRated!</span></h2>
+            <p>Your tool for <strong>finding local businesses</strong> that match your accessibility and dietary needs!</p>
+            <p>Dive into our <strong>vibrant community</strong>, crafted to make accessibility a breeze and to unite kindred spirits.</p>
+            <p>Let's <strong>explore together</strong> and unleash the freedom to connect, discover, and thrive!</p>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+            <button class="btn primary" onclick="createAccount()">Create a new account</button>
+            <button class="btn secondary" onclick="signIn()">Sign into existing account</button>
+            <button class="btn outline" onclick="explore()">Explore without an account</button>
+        </div>
+    </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
-</html>
+    <script>
+        function createAccount() {
+            alert("Redirecting to Sign-Up Page...");
+            // window.location.href = "/signup"; // Uncomment if you have a sign-up page
+        }
+
+        function signIn() {
+            alert("Redirecting to Login Page...");
+            // window.location.href = "/login"; // Uncomment if you have a login page
+        }
+
+        function explore() {
+            alert("Exploring without an account...");
+            // window.location.href = "/explore"; // Uncomment if you have an explore page
+        }
+    </script>
+
+    <link rel="stylesheet" href="styles.css">
+</body>
+
+
