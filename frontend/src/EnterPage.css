@@ -1,42 +1,73 @@
 .enter-page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: white;
-    text-align: center;
-    font-family: 'Segoe UI', sans-serif;
-  }
-  
-  .enter-page h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .enter-page p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
-  .button-group {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .button-group button {
-    padding: 12px 30px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: white;
-    color: #2a5298;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .button-group button:hover {
-    background-color: #f0f0f0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: white; /* fixed from 'background-image' */
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 20px;
+}
+
+.enter-page h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #0d0d0e;
+}
+
+.enter-page p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #333;
+  max-width: 400px;
+}
+
+/* BUTTON STYLING */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Base styles for all buttons */
+.button-group button {
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* First Button – Create (Hot Pink) */
+.button-group button:nth-child(1) {
+  background-color: #e6007e;
+  color: white;
+  border: none;
+  box-shadow: 3px 4px 0px #7a004e;
+}
+
+/* Second Button – Sign In (Dark Green) */
+.button-group button:nth-child(2) {
+  background-color: #106b27;
+  color: white;
+  border: none;
+  box-shadow: 3px 4px 0px #003b14;
+}
+
+/* Third Button – Explore (Outline Pink) */
+.button-group button:nth-child(3) {
+  background-color: white;
+  color: #e6007e;
+  border: 2px solid #e6007e;
+  box-shadow: 3px 4px 0px #e6007e;
+}
+
+/* Hover effect */
+.button-group button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
