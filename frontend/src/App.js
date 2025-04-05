@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import './css/App.css';
+
+import EnterPage from './pages/EnterPage';
+import RegisterPage from './pages/RegisterPage';
+import SignInPage from './pages/SignInPage';
+import DashboardPage from './pages/DashboardPage';
+import CreateAccountPage from './pages/CreateAccountPage';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<EnterPageWrapper />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/create-account" element={<CreateAccountPage />} />
+          <Route path="/login" element={<SignInPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+          
+        </Routes>
+      </div>
+    </Router>
+  );
+}
+
+function EnterPageWrapper() {
+  const navigate = useNavigate();
+
+  return (
+    <EnterPage
+      onCreateAccount={() => navigate('/register')}
+      onSignIn={() => navigate('/login')}
+      onContinue={() => navigate('/dashboard')}
+    />
   );
 }
 

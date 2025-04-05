@@ -1,0 +1,108 @@
+.signin-page {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .signin-page > .back-button {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+  
+  .signin-page > .back-button a {
+    color: #ec008c;
+    text-decoration: none;
+  }
+  
+  .signin-page > h2 {
+    font-size: 1.5rem;
+    color: #43002d;
+    margin-bottom: 1rem;
+  }
+  
+  /* Labels */
+  .signin-page label {
+    font-weight: 600;
+    color: #333;
+    margin-top: 1rem;
+    display: block;
+  }
+  
+  /* Email input */
+  .signin-page input[type="email"] {
+    width: 100%;
+    padding: 0.6rem;
+    margin-top: 0.25rem;
+    border-radius: 10px;
+    border: 2px solid #ec008c;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  /* Password input group */
+  .password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-top: 0.25rem;
+  }
+  
+  .password-wrapper input {
+    flex: 1;
+    padding: 0.6rem;
+    border-radius: 10px;
+    border: 2px solid #ec008c;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .eye-toggle {
+    position: absolute;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #43002d;
+  }
+  
+  /* Terms */
+  .terms-note {
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    color: #555;
+  }
+  
+  .terms-note a {
+    color: #ec008c;
+    text-decoration: underline;
+  }
+  
+  /* Submit button */
+  .signin-page button[type="submit"] {
+    margin-top: 1.5rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #ec008c;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 4px 6px 0px #43002d;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .signin-page button[type="submit"]:hover {
+    background-color: #d1007f;
+  }
+  
