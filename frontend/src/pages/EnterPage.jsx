@@ -2,12 +2,7 @@ import React from 'react';
 import welcomeImage from '../images/welcome.jpg';
 import '../css/EnterPage.css';
 
-
-function EnterPage() {
-  const onSignIn = () => console.log('Sign in clicked');
-  const onContinue = () => console.log('Continue clicked');
-  const onCreateAccount = () => console.log('Create account clicked');
-
+function EnterPage({ onCreateAccount, onSignIn, onContinue }) {
   return (
     <div className="enter-page">
       <img src={welcomeImage} alt="Happy people illustration" />

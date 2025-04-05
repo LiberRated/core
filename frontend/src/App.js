@@ -1,34 +1,37 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import './css/App.css';
 
 import EnterPage from './pages/EnterPage';
+import RegisterPage from './pages/RegisterPage';
+import SignInPage from './pages/SignInPage';
+import DashboardPage from './pages/DashboardPage';
 
 function App() {
-  const handleCreateAccount = () => {
-    alert('Redirect to Create Account');
-    // e.g. navigate('/register');
-  };
+  return (
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<EnterPageWrapper />} />
+          <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<SignInPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
+        </Routes>
+      </div>
+    </Router>
+  );
+}
 
-  const handleSignIn = () => {
-    alert('Redirect to Sign In');
-    // e.g. navigate('/login');
-  };
-
-  const handleContinue = () => {
-    alert('Continuing without account');
-    // e.g. navigate('/dashboard');
-  };
+function EnterPageWrapper() {
+  const navigate = useNavigate();
 
   return (
-    <div className="App">
-      <EnterPage
-        onCreateAccount={handleCreateAccount}
-        onSignIn={handleSignIn}
-        onContinue={handleContinue}
-      />
-    </div>
+    <EnterPage
+      onCreateAccount={() => navigate('/register')}
+      onSignIn={() => navigate('/login')}
+      onContinue={() => navigate('/dashboard')}
+    />
   );
 }
 
 export default App;
-
