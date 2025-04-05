@@ -1,6 +1,7 @@
 import React from 'react';
-import './App.css';
-import EnterPage from './EnterPage';
+import './css/App.css';
+
+import EnterPage from './pages/EnterPage';
 
 function App() {
   const handleCreateAccount = () => {

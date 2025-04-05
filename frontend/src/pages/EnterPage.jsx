@@ -1,6 +1,7 @@
 import React from 'react';
-import './EnterPage.css';
-import welcomeImage from './images/welcome.jpg';
+import welcomeImage from '../images/welcome.jpg';
+import '../css/EnterPage.css';
+
 
 function EnterPage() {
   const onSignIn = () => console.log('Sign in clicked');
