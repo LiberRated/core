@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../css/CreateAccountPage.css';
 
 function CreateAccountPage() {
   return (
     <div className="create-account-page">
-      <Link to="/register" className="back-button">← Back</Link>
+      <button className="back-button">
+        <Link to="/register">← Back</Link>
+      </button>
 
       <h2>Create an account</h2>
 
@@ -17,19 +20,18 @@ function CreateAccountPage() {
       <label htmlFor="confirm-password">Please retype your password</label>
       <input type="password" id="confirm-password" />
 
-      <div className="terms">
+      <div>
         <input type="checkbox" id="agree" />
         <label htmlFor="agree">I agree to the LiberRated terms and conditions.</label>
-        <p className="terms-note">
-          <span style={{ color: 'red' }}>*</span>{' '}
+        <p>
+          <span className="required">*</span>{' '}
           <Link to="/terms">Read terms and conditions here</Link>
         </p>
       </div>
 
-      <button className="btn primary">Create new account and continue</button>
+      <button type="submit">Create new account and continue</button>
     </div>
   );
 }
 
-// ✅ Make sure this matches the component name
 export default CreateAccountPage;
