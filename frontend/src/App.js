@@ -6,6 +6,7 @@ import EnterPage from './pages/EnterPage';
 import RegisterPage from './pages/RegisterPage';
 import SignInPage from './pages/SignInPage';
 import DashboardPage from './pages/DashboardPage';
+import CreateAccountPage from './pages/CreateAccountPage';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         <Routes>
           <Route path="/" element={<EnterPageWrapper />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/create-account" element={<CreateAccountPage />} />
           <Route path="/login" element={<SignInPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          
         </Routes>
       </div>
     </Router>
